@@ -216,9 +216,16 @@ public class HudOverlay implements HudElement {
         LocalDateTime now = LocalDateTime.now();
         String[] weekDays = {"星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"};
         String weekDayText = weekDays[now.getDayOfWeek().getValue() - 1];
-        String dateTimeText = now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")) + " " + weekDayText;
-        drawContext.text(textRenderer, dateTimeText, x, y, DEFAULT_COLOR, true);
-        return DEFAULT_HEIGHT;
+        String labelText = "现实时间：";
+        drawContext.text(textRenderer, labelText, x, y, color, true);
+
+        int labelWidth = textRenderer.width(labelText);
+        String dateText = now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        drawContext.text(textRenderer, dateText, x + labelWidth, y, DEFAULT_COLOR, true);
+
+        String timeText = now.format(DateTimeFormatter.ofPattern("HH:mm:ss")) + " " + weekDayText;
+        drawContext.text(textRenderer, timeText, x, y + DEFAULT_HEIGHT, DEFAULT_COLOR, true);
+        return DEFAULT_HEIGHT * 2;
     }
 
 
