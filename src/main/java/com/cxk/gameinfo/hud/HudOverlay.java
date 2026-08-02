@@ -94,7 +94,7 @@ public class HudOverlay implements HudElement {
     private void renderPlayerEquipment(GuiGraphicsExtractor drawContext) {
         if (!config.showEquipment) return;
         LocalPlayer player = client.player;
-        if (player == null || client.options.hideGui) return;
+        if (player == null || client.options.hud.hideGui) return;
         int screenWidth = client.getWindow().getGuiScaledWidth();
         int screenHeight = client.getWindow().getGuiScaledHeight();
         // 装备显示在物品栏右侧 物品栏宽度是182像素（9个槽位×20像素+2像素边距），所以91是物品栏右边缘，再加10像素间距
