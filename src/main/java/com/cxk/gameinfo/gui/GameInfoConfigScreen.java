@@ -172,7 +172,7 @@ public class GameInfoConfigScreen extends Screen {
         // 颜色选择按钮
         this.colorButton = this.addRenderableWidget(Button.builder(
                 Component.literal("选择颜色"),
-                button -> this.minecraft.setScreen(new ColorPickerScreen(this, (color, colorName) -> {
+                button -> this.minecraft.gui.setScreen(new ColorPickerScreen(this, (color, colorName) -> {
                     config.color = color;
                 })))
                 .bounds(centerX - 50, startY + spacing, 100, 20)
@@ -252,7 +252,7 @@ public class GameInfoConfigScreen extends Screen {
 
     @Override
     public void onClose() {
-        this.minecraft.setScreen(this.parent);
+        this.minecraft.gui.setScreen(this.parent);
     }
 
     @Override
