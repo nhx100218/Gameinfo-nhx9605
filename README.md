@@ -1,13 +1,13 @@
-26.1.2版本:
-gradle需要9.4.0以上版本
+26.2版本:
+gradle需要9.6.1以上版本
 建议gradle，jdk啥的都用最新版本
 
 ```properties
-minecraft_version=26.1.2
-loader_version=0.18.6
-loom_version=1.16-SNAPSHOT
+minecraft_version=26.2
+loader_version=0.19.3
+loom_version=1.17-SNAPSHOT
 # Fabric API
-fabric_api_version=0.145.4+26.1.2
+fabric_version=0.156.0+26.2
 ```
 
 # 我的世界信息显示GameInfo模组
@@ -22,3 +22,4 @@ GameInfo模组可以在游戏中显示当前的游戏信息，包括：
 - 生物信息展示
 - 熔炉信息展示
 - 区块永久加载
+- 现实世界显示
