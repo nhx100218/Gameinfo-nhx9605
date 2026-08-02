@@ -3,10 +3,10 @@
   "id": "gameinfo",
   "version": "${version}",
   "name": "gameinfo",
-  "description": "Gameinfo-nhx9605",
-  "authors": ["nhx9605"],
+  "description": "Gameinfo",
+  "authors": ["yunfei","nhx9605"],
   "contact": {
-    "repo": "Gameinfo是一个轻量化的信息显示模组，由nhx9605重置并修复bug"
+    "repo": "Gameinfo是一个轻量化的信息显示模组，由yunfei做高版本移植，nhx9605重置并修复bug"
   },
   "license": "All-Rights-Reserved",
   "icon": "assets/gameinfo/icon.png",
