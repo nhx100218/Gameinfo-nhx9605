@@ -25,7 +25,7 @@ public class KeybindHandler {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openGuiKeyBinding.consumeClick()) {
                 Minecraft mc = Minecraft.getInstance();
-                if (mc.gui.screen == null) {
+                if (mc.gui.screen() == null) {
                     mc.gui.setScreen(new GameInfoConfigScreen(null));
                 }
             }
